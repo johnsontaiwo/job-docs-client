@@ -11,7 +11,7 @@ class App extends Component {
           <h2>Job applications tracker</h2>
         </div>
         <p className="App-intro">
-     Keeping track of all jobs application I've submitted 
+     Keeping track of all job applications I've submitted 
         </p>
       </div>
     );
