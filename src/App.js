@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Routes from './Routes/routes'
 import logo from './logo.svg';
 import './App.css';
 
@@ -11,7 +12,7 @@ class App extends Component {
           <h2>Job applications tracker</h2>
         </div>
         <p className="App-intro">
-     Keeping track of all job applications I've submitted 
+    <Routes />
         </p>
       </div>
     );

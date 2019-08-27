@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import Job from './jobs'
+import Job from './job';
+import Jobs from './jobs';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import { fetchJobs } from '../Actions/job_actions'
 
 
@@ -30,7 +33,7 @@ const mapStateToProps = (state) => {
   )
 }
 
-const mapDispatchToProps = dispatch  => bindActionCxreators({
+const mapDispatchToProps = dispatch  => bindActionCreators({
   fetchJobs}, dispatch
 )
 
