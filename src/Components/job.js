@@ -4,7 +4,7 @@ class Job extends Component {
 
 
   render() {
-
+  
     return(
       <div>
        Job info
@@ -12,5 +12,10 @@ class Job extends Component {
       )
   }
 }
+
+
+const mapStateToProps = state => ({
+  job: state.jobs.current
+})
 
 export default Job
