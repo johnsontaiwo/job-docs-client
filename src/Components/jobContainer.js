@@ -14,7 +14,7 @@ componentDidMount() {
 }
 
   render() {
-
+    //debugger
     return(
      <div>
       <Jobs jobs={this.props.jobs} /> 
@@ -28,7 +28,7 @@ componentDidMount() {
 
 const mapStateToProps = (state) => {
   return({
-    jobs: state.jobs
+    jobs: state.jobs.jobs
   }
   )
 }

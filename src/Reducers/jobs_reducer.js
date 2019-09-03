@@ -1,9 +1,9 @@
 
-export default function jobsreducer ( state = {jobs: [] }, action ) {
+export default function jobsReducer ( state = {jobs: [] }, action) {
 
   switch (action.type) {
     case "GET_JOBS":
-     return {...state, jobs: [...state.jobs, action.payload]}
+     return {...state, jobs: action.jobs}
 
      default: 
        return state

@@ -11,7 +11,7 @@ class Routes extends Component {
     return(
       <Router >
        <Switch>
-      <div>
+      <div className="App">
        <ul>
        <li>
         <Link to='/jobs' className="Jobs">Jobs</Link>
@@ -20,7 +20,7 @@ class Routes extends Component {
       <hr />
 
       
-        <Route path='/jobs' component={JobContainer}/>
+        <Route path='/jobs' component={JobContainer} />
         <Route exact path='/jobs/:id' render={(props) => ( <Job key={props.match.params.id} {...props} />)} />
         
         </div>
