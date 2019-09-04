@@ -7,7 +7,7 @@ export const getJobs = jobs => {
 }
 
 export const getJob = job => {
-  return {type: "GET_JOBS",
+  return {type: "GET_JOB",
   job
  }
 }
@@ -30,7 +30,7 @@ export const fetchJobs = () => {
 }
 
 export const fetchJob = (id) => {
-  const request = new Request(`${API_URL}/job/{id}`, {
+  const request = new Request(`${API_URL}/jobs/${id}`, {
     method: "GET",
     headers: new Headers({
       'Accept': 'application/json',
@@ -42,7 +42,7 @@ export const fetchJob = (id) => {
   return dispatch => {
     return fetch(request)
     .then(res => res.json())
-    .then(jobs => dispatch(getJob(job)))
+    .then(job => dispatch(getJob(job)))
     .catch(error => console.log(error))
   }
 }

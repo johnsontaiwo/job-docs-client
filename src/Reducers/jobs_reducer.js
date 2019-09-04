@@ -1,6 +1,6 @@
-const intialState = {
+const initialState = {
   jobs: [],
-  current: { title: '', date_aaplied: '', status: '', feedback: '', outcome: '', company: ''}
+  current: { title: '', date_applied: '', status: '', feedback: '', outcome: '', company: ''}
 }
 
 
@@ -10,7 +10,11 @@ export default function jobsReducer ( state = initialState, action) {
     case "GET_JOBS":
      return {...state, jobs: action.jobs}
 
+     case "GET_JOB":
+     return {...state, current: action.job}
+
      default: 
        return state
   }
+
 }
