@@ -12,7 +12,7 @@ class Jobs extends Component {
       <ul>
        {
         jobs.map(job => {
-          return <li key={ job.id }><Link to={ `/jobs/${ job.id }`}>{ job.title }</Link> </li>
+          return <li key={ job.id }><Link to={ `/jobs/${ job.id }`}>{ job.company }</Link> </li>
         })
        }
        </ul>

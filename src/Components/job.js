@@ -10,11 +10,15 @@ class Job extends Component {
   }
   
   render() {
-    //debugger
   const job = this.props.job 
     return(
       <div>
+       <h4>Company: {job.company}</h4>
        <h4>Title: {job.title}</h4>
+       <h4>Application date: {job.date_applied}</h4>
+       <h4>Status: {job.status}</h4>
+       <h4>Feedback: {job.feedback}</h4>
+       <h4>Outcome: {job.outcome}</h4>
       </div>
       )
   
