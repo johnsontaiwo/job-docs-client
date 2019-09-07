@@ -54,7 +54,7 @@ export const fetchJob = (id) => {
 }
 
 export const addJob = (job) => {
-  const request = new Request(`${API_URL}/jobs${job}`, {
+  const request = new Request(`${API_URL}/jobs`, {
     method: "POST",
     headers: new Headers({
       'Accept': 'application/json',
