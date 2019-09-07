@@ -12,6 +12,12 @@ export const getJob = job => {
  }
 }
 
+export const newJob = job => {
+  return {type: "ADD_JOB",
+  job
+}
+}
+
 export const fetchJobs = () => {
   const request = new Request(`${API_URL}/jobs`, {
     method: "GET",
@@ -43,6 +49,24 @@ export const fetchJob = (id) => {
     return fetch(request)
     .then(res => res.json())
     .then(job => dispatch(getJob(job)))
+    .catch(error => console.log(error))
+  }
+}
+
+export const addJob = (job) => {
+  const request = new Request(`${API_URL}/jobs${job}`, {
+    method: "POST",
+    headers: new Headers({
+      'Accept': 'application/json',
+      'Content-Type': "application/json"
+    }),
+    body: JSON.stringify({ job })
+  })
+
+  return dispatch => {
+    return fetch(request)
+    .then(res => res.json())
+    .then(job => dispatch(newJob(job)))
     .catch(error => console.log(error))
   }
 }
