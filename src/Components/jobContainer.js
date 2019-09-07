@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Job from './job';
 import Jobs from './jobs';
+import JobInput from './jobInput';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { fetchJobs } from '../Actions/job_actions'
@@ -18,6 +19,7 @@ componentDidMount() {
     return(
      <div>
       <Jobs jobs={this.props.jobs} /> 
+      <JobInput />
      </div>
 
       )
