@@ -14,9 +14,12 @@ export default function jobsReducer ( state = initialState, action) {
      return {...state, current: action.job}
 
 
-  case "ADD_JOB":
+    case "ADD_JOB":
      return {...state, jobs: [...state.jobs, action.job] }
 
+    case "UPDATE_JOB":
+     return {...state, jobs: action.payload}
+    
      default: 
        return state
   }

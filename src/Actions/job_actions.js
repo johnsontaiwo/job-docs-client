@@ -70,3 +70,24 @@ export const addJob = (job) => {
     .catch(error => console.log(error))
   }
 }
+
+export const updateJob = (job) => {
+  let data = {
+    method: 'PUT',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ job })
+  }
+  return dispatch => {
+    fetch(`${ API_URL }/users/${ job.id }`, data)
+      .then(response => response.json())
+      .then(user => dispatch({
+        type: 'UPDATE_JOB',
+        payload: job
+      }))
+      .catch(err => err)
+  }
+}
+
